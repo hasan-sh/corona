@@ -36,3 +36,31 @@
     transform: rotate(360deg);
   }
 }
+
+
+.item{
+  margin: 10px;
+}
+
+.item > div{
+  padding: 2px;
+}
+
+.MuiPaper-root {
+  margin: 0 5%;
+}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+table > tr:nth-child(even) {
+  background-color: #dddddd;
+}
