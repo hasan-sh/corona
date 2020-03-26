@@ -5,6 +5,7 @@ import * as covid from 'novelcovid';
 import Countries from './Countries';
 import MaterialTable from 'material-table';
 import { getColumns, icons } from './constants';
+import Map from './Map';
 
 function fetch_data(countries) {
   //retrain countries ? covid.countries() : covid.all();
@@ -52,12 +53,13 @@ function App() {
   return (
     <div className="App">
       <div className="item">
-        <button onClick={load}>Reload</button>
+        <Map />
       </div>
       <div className="item">
         <AllCases all={data.all || {}} />
       </div>
       <Countries countries={data.countries} />
+      <button onClick={load}>Reload</button>
       {/* {data.countries &&
        (<table>
             <thead><tr>
