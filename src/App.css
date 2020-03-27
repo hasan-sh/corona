@@ -49,6 +49,13 @@
 .MuiPaper-root {
   margin: 0 5%;
 }
+.MuiTableSortLabel-active {
+  color: rgba(100, 255, 11, 0.87) !important;
+}
+.MuiTableSortLabel-active .MuiSvgIcon-root {
+  color: rgba(100, 255, 11, 0.87) !important;
+}
+
 table {
   font-family: arial, sans-serif;
   border-collapse: collapse;

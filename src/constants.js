@@ -42,11 +42,21 @@ export const icons = {
 
 export function getColumns(all) {
   let columns = [
-    { title: 'Country', field: 'country' },
+    {
+      title: 'Country',
+      field: 'country',
+      render: rowData => (
+        <div>
+          <span>{rowData.tableData.id + 1} - </span>
+          <span>{rowData.country}</span>
+        </div>
+      ),
+    },
     {
       title: 'Cases',
       field: 'cases',
       type: 'numeric',
+      defaultSort: 'desc',
       render: rowData => <strong>{rowData.cases.toLocaleString()}</strong>,
     },
     {
@@ -58,6 +68,22 @@ export function getColumns(all) {
     { title: 'Deaths Today', field: 'todayDeaths', type: 'numeric' },
     { title: 'Recovered', field: 'recovered', type: 'numeric' },
     { title: 'Active', field: 'active', type: 'numeric' },
+    {
+      title: 'Flag',
+      field: 'countryInfo.flag',
+      type: 'string',
+      sorting: false,
+      render: rowData => (
+        <img
+          width="35"
+          style={{
+            verticalAlign: 'middle',
+          }}
+          src={rowData.countryInfo.flag}
+          alt={`Country ${rowData.country}`}
+        />
+      ),
+    },
   ];
   if (all) {
     columns = [
@@ -68,7 +94,9 @@ export function getColumns(all) {
         title: 'Updated',
         field: 'updated',
         render: data => (
-          <span>{data.updated ? new Date(data.updated).toLocaleTimeString() : ''}</span>
+          <span>
+            {data.updated ? new Date(data.updated).toLocaleTimeString() : ''}
+          </span>
         ),
       },
     ];

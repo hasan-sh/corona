@@ -17,11 +17,11 @@ export default function Map() {
       {loaded ? (
         <iframe
           title="Corona map WHO."
-          class="iframe-widget_3"
+          className="iframe-widget_3"
           sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-presentation"
-          allowfullscreen=""
+          allowFullScreen={true}
           src="https://who.maps.arcgis.com/apps/opsdashboard/index.html#/31ba38ba24924aaeb940f15b5e95a1e6"
-          frameborder="0"
+          // frameBorder="0"
           style={{
             display: loaded ? 'inherit' : 'none',
             width: '100%',
