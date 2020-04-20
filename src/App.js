@@ -1,5 +1,5 @@
 import React from 'react';
-import * as covid from 'novelcovid';
+import { NovelCovid } from 'novelcovid';
 import './App.css';
 
 // Components
@@ -7,43 +7,19 @@ import Countries from './Countries';
 import Map from './Map';
 import AllCases from './General';
 
-function fetch_data(countries) {
-  console.log(covid);
-  return countries ? covid.getCountry() : covid.getAll();
-}
+const covid = new NovelCovid()
 
-function normalize(data) {
-  if (Array.isArray(data)) {
-    data.sort((a, b) => (a.cases > b.cases ? -1 : 1));
-    return data.map(entry => {
-      const keys = Object.keys(entry);
-      keys.forEach(key =>
-        Number(entry[key])
-          ? (entry[key] = entry[key].toLocaleString())
-          : entry[key]
-      );
-      return entry;
-    });
-  }
-  const keys = Object.keys(data);
-  keys.forEach(key =>
-    key !== 'updated' && Number(data[key])
-      ? (data[key] = data[key].toLocaleString())
-      : data[key]
-  );
-  console.log(data);
-  return data;
+function fetch_data(countries) {
+  return countries ? covid.countries() : covid.all();
 }
 
 function App() {
   const [data, setData] = React.useState({});
   function load() {
     fetch_data()
-      // .then(normalize)
       .then(all => setData(prevState => ({ ...prevState, all })))
       .catch(console.error);
     fetch_data(true)
-      // .then(normalize)
       .then(data => data.sort((a, b) => (a.cases > b.cases ? -1 : 1)))
       .then(countries => setData(prevState => ({ ...prevState, countries })))
       .catch(console.error);

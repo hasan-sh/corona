@@ -11,7 +11,7 @@
     "@testing-library/user-event": "^7.1.2",
     "gh-pages": "^2.2.0",
     "material-table": "^1.57.2",
-    "novelcovid": "^1.0.6",
+    "novelcovid": "^1.2.6",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1"

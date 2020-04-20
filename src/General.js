@@ -4,7 +4,6 @@ import { getColumns, icons } from './constants';
 
 
 export default function AllCases(props) {
-    console.log(props)
   return (
     <MaterialTable
       title="Cases overall"

@@ -7079,7 +7079,7 @@ no-case@^3.0.3:
     lower-case "^2.0.1"
     tslib "^1.10.0"
 
-node-fetch@^2.6.0:
+node-fetch@*:
   version "2.6.0"
   resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.6.0.tgz#e633456386d4aa55863f676a7ab0daa8fdecb0fd"
   integrity sha512-8dG4H5ujfvFiqDmVu9fQ5bOHUC15JMjMY/Zumv26oOvvVJjM67KF8koCWIabKQ1GJIa9r2mMZscBq/TbdOcmNA==
@@ -7188,12 +7188,12 @@ normalize-url@^3.0.0:
   resolved "https://registry.yarnpkg.com/normalize-url/-/normalize-url-3.3.0.tgz#b2e1c4dc4f7c6d57743df733a4f5978d18650559"
   integrity sha512-U+JJi7duF1o+u2pynbp2zXDW2/PADgC30f0GsHZtRh+HOcXHnw137TrNlyxxRvWW5fjKd3bcLHPxofWuCjaeZg==
 
-novelcovid@^1.0.6:
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/novelcovid/-/novelcovid-1.0.6.tgz#bfb94ef40a95fdc1c2d459f0cb42800d43b5c014"
-  integrity sha512-sxwTs6ZI0UM+SBCl72N2/dLv+soREPgAj9Y4da5kugOaOSYKrqqivczSe70ecf96DMLHPbrDgDE94FhG3fdsOA==
+novelcovid@^1.2.6:
+  version "1.2.6"
+  resolved "https://registry.yarnpkg.com/novelcovid/-/novelcovid-1.2.6.tgz#ac5d2742287f3c92845a06182144a4420373b1b1"
+  integrity sha512-PDvg4y2Qct/ur9zINxCCsfTMKl5h5ojhjm5hG3DDV5J8O4a2qKzJd0x5dJtWWCefas0MaLlB3bgHVfYII4s7zQ==
   dependencies:
-    node-fetch "^2.6.0"
+    node-fetch "*"
 
 npm-run-path@^2.0.0:
   version "2.0.2"
